@@ -20,6 +20,8 @@ package ucsc.hadoop;
 
 import org.apache.hadoop.util.ProgramDriver;
 
+import ucsc.hadoop.homework2.Homework2Part1;
+import ucsc.hadoop.homework2.Homework2Part2;
 import ucsc.hadoop.homework2.MovieCount;
 
 /**
@@ -36,6 +38,12 @@ public class HomeworkDriver {
       pgd.addClass("moviecount", MovieCount.class, 
                 "A map/reduce program that counts # of movies for each year");
      
+      pgd.addClass("homework2part1", Homework2Part1.class, 
+              "Homework 2 part 1 - for each movie, show who are the actors");
+      
+      pgd.addClass("homework2part2", Homework2Part2.class, 
+              "Homework 2 part 2 - for each actor, show how many movies he/she has played in");
+      
       pgd.driver(argv);
     }
     catch(Throwable e){
